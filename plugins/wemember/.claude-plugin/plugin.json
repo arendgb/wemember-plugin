@@ -1,7 +1,7 @@
 {
   "name": "wemember",
   "displayName": "Wemember",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Your company's memory in Claude Code: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
   "author": {
     "name": "Wemember",
@@ -10,6 +10,7 @@
   "homepage": "https://github.com/arendgb/wemember-plugin",
   "repository": "https://github.com/arendgb/wemember-plugin",
   "license": "SEE LICENSE IN LICENSE",
+  "icon": "./assets/logo.png",
   "keywords": ["memory", "company-memory", "context", "mcp"],
   "userConfig": {
     "propose_memories": {
