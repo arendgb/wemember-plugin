@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wemember": {
+      "type": "http",
+      "url": "https://app.wemember.ai/mcp"
+    }
+  }
+}

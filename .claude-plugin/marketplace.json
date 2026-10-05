@@ -1,0 +1,16 @@
+{
+  "name": "wemember",
+  "owner": {
+    "name": "Wemember",
+    "url": "https://github.com/arendgb/wemember-plugin"
+  },
+  "description": "Wemember plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "wemember",
+      "source": "./plugins/wemember",
+      "description": "Your company's memory in Claude Code: relevant Wemember context at the first prompt of a session, and optional memory proposals.",
+      "category": "productivity"
+    }
+  ]
+}

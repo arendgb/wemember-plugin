@@ -1,0 +1,12 @@
+{
+  "name": "wemember",
+  "plugins": [
+    {
+      "name": "wemember",
+      "source": { "source": "local", "path": "./plugins/wemember" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity",
+      "interface": { "displayName": "Wemember" }
+    }
+  ]
+}
