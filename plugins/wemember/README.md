@@ -55,6 +55,41 @@ If you already connected Wemember by hand (`claude mcp add` or `codex mcp add`),
 
 Telling the agent "don't use Wemember" stops its own Wemember calls, but not the plugin's hooks. Disable the plugin for that.
 
+## Updates
+
+Changes on the Wemember server reach you at once; a new tool shows up in your next session. Changes to the plugin itself (hooks, skills, the script) arrive as a new plugin version, which your client has to fetch.
+
+**Claude Code.** Automatic updates are off by default for this marketplace. Turn them on once:
+
+1. Run `/plugin`, open **Marketplaces**, select **wemember** and choose **Enable auto-update**.
+2. From then on, Claude Code checks for a new version within ten minutes of your first message in a session. The running session keeps its version until you run `/reload-plugins`; the next session loads the new one.
+
+To update by hand instead: `/plugin` → **Installed** → Wemember → **Update now**, or `claude plugin update wemember@wemember` in your shell.
+
+**Codex.** Run `codex plugin marketplace upgrade wemember` and start a new session. If a new version changes a hook, Codex skips that hook until you trust it again in `/hooks`.
+
+### For administrators
+
+**Claude Code, for everyone in your organization.** Put this in your managed settings: at claude.ai under **Organization settings → Claude Code → Managed settings**, or in `managed-settings.json` through your device management. It registers the marketplace on every machine with automatic updates on, and installs and enables Wemember:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "wemember": {
+      "source": { "source": "github", "repo": "arendgb/wemember-plugin" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": {
+    "wemember@wemember": true
+  }
+}
+```
+
+Each person still signs in to Wemember once via `/mcp`; the plugin never shares a sign-in.
+
+**Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `arendgb/wemember-plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
+
 ## If something goes wrong
 
 - **No context appears.** Check that `/mcp` shows Wemember as connected; hooks never start a sign-in. A prompt that matches nothing in Wemember adds nothing, by design.

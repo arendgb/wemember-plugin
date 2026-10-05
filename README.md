@@ -23,6 +23,8 @@ codex plugin marketplace add arendgb/wemember-plugin
 
 Install Wemember from `/plugins`, sign in with `codex mcp login wemember`, and trust its hooks in `/hooks`.
 
+**Updates.** Claude Code does not update this marketplace automatically unless you turn it on. Automatic updates, and a ready-made setup for administrators in Claude Code and in Codex or ChatGPT workspaces: see [Updates](plugins/wemember/README.md#updates).
+
 ## Contents
 
 | Path | What |
