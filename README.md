@@ -27,7 +27,7 @@ Install Wemember from `/plugins`, sign in with `codex mcp login wemember`, and t
 
 | Path | What |
 | --- | --- |
-| `plugins/wemember/` | the plugin: manifests for both hosts, the MCP connection, hooks, one script, one skill |
+| `plugins/wemember/` | the plugin: manifests for both hosts, the MCP connection, hooks, one script and seven skills |
 | `.claude-plugin/marketplace.json` | the Claude Code marketplace |
 | `.agents/plugins/marketplace.json` | the Codex marketplace |
 

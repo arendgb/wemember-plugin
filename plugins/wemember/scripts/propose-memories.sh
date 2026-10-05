@@ -33,7 +33,7 @@ asked_file="$dir/$session.asked"
 threshold="${WEMEMBER_PROPOSE_AFTER_TOOL_CALLS:-15}"
 case "$threshold" in ''|*[!0-9]*) threshold=15 ;; esac
 
-reason='Wemember (you turned on memory proposals): if this session settled a decision, a finding or an agreement that is worth keeping for the team, propose at most three with Wemember memory.remember: personal scope, one fact each, never secrets or personal data of customers. Then confirm in one short sentence what you proposed. If nothing qualifies, save nothing and reply only: Nothing to propose to Wemember.'
+reason='Wemember (you turned on memory proposals): if the user stated a decision, a preference or an agreement in this session that is worth keeping for the team, propose at most three, each with Wemember memory.remember in the exact words of the user: personal scope, never secrets or personal data of customers. Then confirm in one short sentence what you proposed. If nothing qualifies, save nothing and reply only: Nothing to propose to Wemember.'
 
 case "${1:-}" in
   count)
