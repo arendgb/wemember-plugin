@@ -1,15 +1,15 @@
-# Wemember plugin for Claude Code and Codex
+# Wemember plugin for Claude Code, Codex, and Cursor
 
-Wemember is your company's memory: your AI tools keep it current, within your rules, and all read from it. This plugin adds Wemember to Claude Code and Codex. It sits next to the ordinary Wemember MCP connection; it does not replace it.
+Wemember is your company's memory: your AI tools keep it current, within your rules, and all read from it. This plugin adds Wemember to Claude Code, Codex, and Cursor (including Grok Bot). It sits next to the ordinary Wemember MCP connection; it does not replace it.
 
 ## What it does
 
 | Part | When | What happens |
 | --- | --- | --- |
 | Wemember MCP server | always | Connects `https://app.wemember.ai/mcp` with your own sign-in (OAuth). The agent gets the same Wemember tools as with a manual MCP connection. |
-| Context at the first prompt | the first prompt of a session, and the first prompt after the conversation is compacted | Calls the Wemember tool `context.prompt` with your prompt. If Wemember finds relevant sources or memory you may see, a short text with source and version is added to the model's context. If nothing is relevant, nothing is added. |
-| Skills | when they fit what you ask | Eight short guides for the agent, used only when they fit: `wemember` (what Wemember can do), `catch-up` (what the company knows; continue earlier work), `remember`, `correct`, `import-docs`, `share` (a page or shared source for a colleague), `company-skills` (the company's skill library) and `setup` (once after connecting: after your yes, a short Wemember section in the tool's own memory file). In Claude Code they are `/wemember:<name>`; in Codex `$<name>`. |
-| Memory proposals | **off by default** | When you turn it on: after a session with at least 15 tool calls, the agent is asked once to propose up to three decisions, preferences or agreements you stated, as proposals for review. |
+| Context at the first prompt | the first prompt of a session, and the first prompt after the conversation is compacted (**Claude Code and Codex only**) | Calls the Wemember tool `context.prompt` with your prompt. If Wemember finds relevant sources or memory you may see, a short text with source and version is added to the model's context. If nothing is relevant, nothing is added. Cursor / Grok Bot do not load these session hooks; use the MCP tools and skills instead. |
+| Skills | when they fit what you ask | Eight short guides for the agent, used only when they fit: `wemember` (what Wemember can do), `catch-up` (what the company knows; continue earlier work), `remember`, `correct`, `import-docs`, `share` (a page or shared source for a colleague), `company-skills` (the company's skill library) and `setup` (once after connecting: after your yes, a short Wemember section in the tool's own memory file). In Claude Code they are `/wemember:<name>`; in Codex `$<name>`; in Cursor invoke them from Customize or with `/skill-name`. |
+| Memory proposals | **off by default** (**Claude Code and Codex only**) | When you turn it on: after a session with at least 15 tool calls, the agent is asked once to propose up to three decisions, preferences or agreements you stated, as proposals for review. Not available via Cursor hooks yet. |
 
 ## What it sends and stores
 
@@ -42,16 +42,25 @@ codex plugin marketplace add arendgb/wemember-plugin
 
 Install Wemember from `/plugins`, sign in with `codex mcp login wemember`, and trust its hooks in `/hooks`. Codex skips plugin hooks until you trust them. The Codex IDE extension does not load plugins; use the ordinary MCP connection there.
 
-If you already connected Wemember by hand (`claude mcp add` or `codex mcp add`), remove that connection, so the agent does not see the tools twice.
+
+**Cursor / Grok Bot**
+
+- **Team marketplace (Teams / Enterprise):** open [Dashboard → Plugins & MCPs](https://cursor.com/dashboard), Add Marketplace → Import from Repo `arendgb/wemember-plugin`. Install Wemember from Customize, then complete the Wemember MCP OAuth sign-in when prompted.
+- **Local development:** copy or symlink this directory to `~/.cursor/plugins/local/wemember`, run Developer: Reload Window, and confirm skills and the Wemember MCP server under Customize. On Teams/Enterprise, Allow Local Plugin Imports must be enabled.
+- **Public Cursor Marketplace:** this repo is not listed there until it is submitted at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) and reviewed.
+
+Cursor discovers skills under `skills/` and the MCP server from `.mcp.json` (referenced by `.cursor-plugin/plugin.json`). Claude/Codex session-context hooks (`hooks/hooks.json`, `hooks/codex-hooks.json`) are not registered for Cursor: Cursor's hook events differ, and the `mcp_tool` hook type is host-specific. Do not expect automatic `context.prompt` injection or end-of-session memory proposals in Cursor until a verified Cursor hook mapping exists.
+
+If you already connected Wemember by hand (`claude mcp add`, `codex mcp add`, or a manual Cursor MCP entry), remove that connection, so the agent does not see the tools twice.
 
 ## Turn it on or off
 
-| What | Claude Code | Codex |
-| --- | --- | --- |
-| The whole plugin | `/plugin`, disable Wemember; per project with `enabledPlugins` in `.claude/settings.json` | `/plugins`, disable Wemember |
-| Only the hooks | — | `/hooks`, disable the Wemember hooks |
-| Memory proposals | `/config`, plugin option "Propose memories at the end of longer sessions" | start Codex with `WEMEMBER_PROPOSE_MEMORIES=1` in the environment |
-| Proposals after more or fewer tool calls | `WEMEMBER_PROPOSE_AFTER_TOOL_CALLS=<number>` in the environment | the same |
+| What | Claude Code | Codex | Cursor / Grok Bot |
+| --- | --- | --- | --- |
+| The whole plugin | `/plugin`, disable Wemember; per project with `enabledPlugins` in `.claude/settings.json` | `/plugins`, disable Wemember | Customize → disable or uninstall Wemember |
+| Only the hooks | — | `/hooks`, disable the Wemember hooks | n/a (no Cursor hooks in this release) |
+| Memory proposals | `/config`, plugin option "Propose memories at the end of longer sessions" | start Codex with `WEMEMBER_PROPOSE_MEMORIES=1` in the environment | n/a |
+| Proposals after more or fewer tool calls | `WEMEMBER_PROPOSE_AFTER_TOOL_CALLS=<number>` in the environment | the same | n/a |
 
 Telling the agent "don't use Wemember" stops its own Wemember calls, but not the plugin's hooks. Disable the plugin for that.
 
@@ -67,6 +76,9 @@ Changes on the Wemember server reach you at once; a new tool shows up in your ne
 To update by hand instead: `/plugin` → **Installed** → Wemember → **Update now**, or `claude plugin update wemember@wemember` in your shell.
 
 **Codex.** Run `codex plugin marketplace upgrade wemember` and start a new session. If a new version changes a hook, Codex skips that hook until you trust it again in `/hooks`.
+
+
+**Cursor.** After the team marketplace tracks this repo, use Refresh (or Enable Auto Refresh on GitHub imports) under Dashboard → Plugins & MCPs. For a local install under `~/.cursor/plugins/local/wemember`, pull or copy the new files and run Developer: Reload Window. Official public marketplace updates follow Cursor's review process after [publish](https://cursor.com/marketplace/publish).
 
 ### For administrators
 
@@ -87,6 +99,9 @@ To update by hand instead: `/plugin` → **Installed** → Wemember → **Update
 ```
 
 Each person still signs in to Wemember once via `/mcp`; the plugin never shares a sign-in.
+
+**Cursor, for your team.** In the Cursor Dashboard under **Plugins & MCPs**, add a Team Marketplace with Import from Repo `arendgb/wemember-plugin`. Set Marketplace Access and per-plugin installation mode (Default Off, Default On, or Required). Each person still signs in to Wemember once via the MCP OAuth prompt; the plugin never shares a sign-in.
+
 
 **Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `arendgb/wemember-plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
 
