@@ -1,0 +1,15 @@
+{
+  "name": "wemember",
+  "version": "0.3.1",
+  "description": "Your company's memory in Cursor and Grok Bot: Wemember MCP tools plus skills for catch-up, remember, share, and related workflows. Session-context hooks remain Claude Code and Codex only.",
+  "author": {
+    "name": "Wemember"
+  },
+  "homepage": "https://github.com/arendgb/wemember-plugin",
+  "repository": "https://github.com/arendgb/wemember-plugin",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["memory", "company-memory", "context", "mcp"],
+  "logo": "assets/logo.png",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
