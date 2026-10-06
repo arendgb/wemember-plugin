@@ -94,7 +94,7 @@ Each person still signs in to Wemember once via `/mcp`; the plugin never shares 
 
 - **No context appears.** Check that `/mcp` shows Wemember as connected; hooks never start a sign-in. A prompt that matches nothing in Wemember adds nothing, by design.
 - **A hook error shows.** The prompt continues without Wemember context. The hook gives up after 8 seconds.
-- **Context from the wrong workspace.** The plugin uses your connection's active workspace. Ask the agent to switch Wemember workspace (the `workspace.switch` tool).
+- **Context from another workspace.** With more than one workspace, the plugin searches all of them and every block says where it is from (`Workspace: …`). To leave a workspace out, open Wemember in that workspace, go to Agent access and remove this app there.
 
 ## Support
 
