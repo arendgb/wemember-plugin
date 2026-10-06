@@ -1,6 +1,6 @@
 ---
 name: share
-description: Make something from Wemember to share with a colleague, as a short page or document, or as a shared source inside Wemember. Use when the user wants to hand over, brief or share knowledge with someone else.
+description: Share something from Wemember with a colleague, as a short page or document or as a shared source in Wemember. Use when the user wants to hand over, brief or share knowledge.
 ---
 
 # Share with a colleague

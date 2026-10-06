@@ -1,6 +1,6 @@
 {
   "name": "wemember",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Your company's memory in Codex: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
   "author": {
     "name": "Wemember",

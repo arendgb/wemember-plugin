@@ -17,6 +17,7 @@ Wemember is the company's memory: sources and reviewed knowledge that the user's
 | hand something over to a colleague, as a page or inside Wemember | `share` skill |
 | do a task the company's way, or browse the skill library | `company-skills` skill |
 | work for more than one team or company | `workspace.list`; say where a call acts in its argument `workspace` (`workspace.suggest` when it is unclear) |
+| set Wemember up in this AI tool, once after connecting it | `setup` skill (`workspace.list`) |
 
 ## Rules that always apply
 
