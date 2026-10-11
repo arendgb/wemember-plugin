@@ -11,6 +11,12 @@
       "source": "./plugins/wemember",
       "description": "Your company's memory in Claude Code: relevant Wemember context at the first prompt of a session, and optional memory proposals.",
       "category": "productivity"
+    },
+    {
+      "name": "wemember-staging",
+      "source": "./plugins/wemember-staging",
+      "description": "Wemember staging environment for testing: context at the first prompt, skills and optional memory proposals.",
+      "category": "productivity"
     }
   ]
 }

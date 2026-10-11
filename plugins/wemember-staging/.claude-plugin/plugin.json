@@ -1,0 +1,28 @@
+{
+  "name": "wemember-staging",
+  "displayName": "Wemember staging (testing)",
+  "version": "0.2.3",
+  "description": "Staging environment for testing. Your company's memory in Claude Code: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
+  "author": {
+    "name": "Wemember",
+    "url": "https://github.com/arendgb/wemember-plugin"
+  },
+  "homepage": "https://github.com/arendgb/wemember-plugin",
+  "repository": "https://github.com/arendgb/wemember-plugin",
+  "license": "SEE LICENSE IN LICENSE",
+  "icon": "./assets/logo.png",
+  "keywords": [
+    "memory",
+    "company-memory",
+    "context",
+    "mcp"
+  ],
+  "userConfig": {
+    "propose_memories": {
+      "type": "boolean",
+      "title": "Propose memories at the end of longer sessions",
+      "description": "Off by default. When on, after a session with at least 15 tool calls Claude is asked once to propose up to three decisions, preferences or agreements you stated to Wemember, as personal proposals for review.",
+      "default": false
+    }
+  }
+}

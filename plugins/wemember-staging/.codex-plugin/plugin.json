@@ -1,0 +1,30 @@
+{
+  "name": "wemember-staging",
+  "version": "0.2.3",
+  "description": "Staging environment for testing. Your company's memory in Codex: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
+  "author": {
+    "name": "Wemember",
+    "url": "https://github.com/arendgb/wemember-plugin"
+  },
+  "homepage": "https://github.com/arendgb/wemember-plugin",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "memory",
+    "company-memory",
+    "context",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/codex-hooks.json",
+  "interface": {
+    "displayName": "Wemember staging (testing)",
+    "shortDescription": "Wemember staging environment for testing",
+    "developerName": "Wemember",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/arendgb/wemember-plugin",
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png"
+  }
+}

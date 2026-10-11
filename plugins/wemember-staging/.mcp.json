@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wemember-staging": {
+      "type": "http",
+      "url": "https://app.staging.wemember.ai/mcp"
+    }
+  }
+}

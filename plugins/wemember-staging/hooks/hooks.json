@@ -1,0 +1,61 @@
+{
+  "description": "Wemember for Claude Code. Context at the first prompt of a session and again after a compaction; optional memory proposals. See README.md.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:wemember-staging:wemember-staging",
+            "tool": "context.prompt",
+            "input": {
+              "prompt": "${prompt}",
+              "session": "${session_id}"
+            },
+            "timeout": 8,
+            "statusMessage": "Checking Wemember"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:wemember-staging:wemember-staging",
+            "tool": "context.prompt",
+            "input": {
+              "session": "${session_id}",
+              "event": "compact"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/propose-memories.sh\" count",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/propose-memories.sh\" stop-claude",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
