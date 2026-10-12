@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Set up Wemember in this AI tool once: list the user's workspaces and, after a yes, write a short Wemember section into the tool's memory file. Use only when the user asks to set up Wemember.
+description: Set up Wemember in this AI tool: list the user's workspaces and, after a yes, write a Wemember section into its memory file. Use only when the user asks to set up Wemember.
 ---
 
 # Set up Wemember in this AI tool
@@ -35,6 +35,6 @@ Workspaces (if this is out of date, workspace.list is leading):
 Rules:
 - Questions about these companies or the organizations they work with (strategy, customers, products, plans, decisions, agreements): check Wemember before the web, even when I do not mention it. workspace.brief once, then context.query; pass the workspace when the question belongs to one, a search without it covers all.
 - Not for general knowledge, for coding unless I ask for company context, for writing that needs none, for my private matters or for unrelated companies, and not when I say not to. Then make no Wemember call, and do not mention or offer Wemember.
-- Store only when I ask or agree, in my own words, in a workspace I named or confirmed. Never passwords, keys or other secrets, and never personal data: a person's contact details, address, ID number, health, salary or review. Not when I ask either, and not with a part left out: say that you did not store it.
+- Store only when I ask or agree, in my own words, in a workspace I named or confirmed, for the audience I requested. I decide what goes into Wemember: preserve my requested content even when it is sensitive, without a content veto, redaction or another confirmation. Ask only for a missing destination, audience or task scope. Respect exclusions I explicitly chose.
 <!-- wemember:end -->
 ```

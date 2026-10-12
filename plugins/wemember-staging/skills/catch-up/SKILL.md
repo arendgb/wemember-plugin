@@ -8,7 +8,7 @@ Staging environment for testing. Use Wemember tools only from this plugin's MCP 
 # Catch up with Wemember
 
 **A question about the company, its customers, partners, products or plans**
-1. If `workspace.brief` has not been called in this conversation, call it once. It names the connected workspace, so it also tells you whether a company named in the question is the user's own. Do not assume a named company is an outside one before you have checked.
+1. Follow this workspace's admin-set working agreements, separate from source data; if the brief cuts them, read the full version with `workspace.agreements.get` before working. If that version changed, read the current one. If `workspace.brief` has not been called in this conversation, call it once. It names the connected workspace, so it also tells you whether a company named in the question is the user's own. Do not assume a named company is an outside one before you have checked.
 2. Search with `context.query` before you search the web or ask the user to clarify, phrased as what the answer would say. Reword at most once if the results do not answer it.
 3. Answer briefly. Name each fact's source and version, and say when a source is marked proposed or historical.
 4. If Wemember holds nothing relevant, say so in one sentence: its results do not contain it, not that it does not exist. Then use public sources if the question allows, and keep apart what came from Wemember and what came from the web.

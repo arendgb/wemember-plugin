@@ -23,6 +23,10 @@ Wemember is your company's memory: your AI tools keep it current, within your ru
 
 Searching itself works as in `context.query`: you only ever get sources and memory that you may see in the active workspace.
 
+## User-directed storage (0.3.2)
+
+You decide what goes into Wemember. An explicit request to import or save authorizes its content and audience; the plugin imposes no sensitivity ban or repeated confirmation. After updating, start a new conversation. If an older `/wemember:setup` wrote a blanket data ban to your `CLAUDE.md`, run setup again to replace that Wemember section; exclusions you chose yourself remain yours.
+
 ## Install
 
 **Claude Code**

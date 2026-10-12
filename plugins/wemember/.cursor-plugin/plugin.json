@@ -1,6 +1,6 @@
 {
   "name": "wemember",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Your company's memory in Cursor and Grok Bot: Wemember MCP tools plus skills for catch-up, remember, share, and related workflows. Session-context hooks remain Claude Code and Codex only.",
   "author": {
     "name": "Wemember"
