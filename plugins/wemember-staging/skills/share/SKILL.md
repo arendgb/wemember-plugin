@@ -15,3 +15,5 @@ Staging environment for testing. Use Wemember tools only from this plugin's MCP 
    - **Inside Wemember.** `sources.import` with `scope` "team" (and the teamId) or "organization", only when the user asks. It is visible to that audience at once, before review, with the content the user requested.
 5. Name each fact's source and version in the result, and add the date.
 6. Tell the user what is in it and who can see it.
+
+When the requested page has been published in Wemember, show it with `pages.view` and a short clickable link, before explaining who can see it. Display only the requested result; do not add unsolicited source cards. A preference for source cards only on request does not hide the page the user asked for. Without an interactive viewer, put the page title and clickable address first.
