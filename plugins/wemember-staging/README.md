@@ -10,7 +10,7 @@ Wemember is your company's memory: your AI tools keep it current, within your ru
 | --- | --- | --- |
 | Wemember MCP server | always | Connects `https://app.staging.wemember.ai/mcp` with your own sign-in (OAuth). The agent gets the same Wemember tools as with a manual MCP connection. |
 | Context at the first prompt | the first prompt of a session, and the first prompt after the conversation is compacted | Calls the Wemember tool `context.prompt` with your prompt. If Wemember finds relevant sources or memory you may see, a short text with source and version is added to the model's context. If nothing is relevant, nothing is added. |
-| Skills | when they fit what you ask | Seven short guides for the agent, used only when they fit: `wemember` (what Wemember can do), `catch-up` (what the company knows; continue earlier work), `remember`, `correct`, `import-docs`, `share` (a page or shared source for a colleague) and `company-skills` (the company's skill library). In Claude Code they are `/wemember-staging:<name>`; in Codex `$wemember-staging:<name>`. |
+| Skills | when they fit what you ask | Eight short guides for the agent, used only when they fit: `wemember` (what Wemember can do), `catch-up` (what the company knows; continue earlier work), `remember`, `correct`, `import-docs`, `share` (a page or shared source for a colleague) `company-skills` (the company's skill library) and `setup` (the Wemember section in this tool). In Claude Code they are `/wemember-staging:<name>`; in Codex `$wemember-staging:<name>`. |
 | Memory proposals | **off by default** | When you turn it on: after a session with at least 15 tool calls, the agent is asked once to propose up to three decisions, preferences or agreements you stated, as proposals for review. |
 
 ## What it sends and stores
@@ -24,6 +24,10 @@ Wemember is your company's memory: your AI tools keep it current, within your ru
 - **On your machine**, only when memory proposals are on: a tool-call counter and a marker per session in the plugin's data directory, deleted after two days.
 
 Searching itself works as in `context.query`: you only ever get sources and memory that you may see in the active workspace.
+
+## User-directed storage (0.3.2)
+
+You decide what goes into Wemember. An explicit request to import or save authorizes its content and audience; the plugin imposes no sensitivity ban or repeated confirmation. After updating, start a new conversation. If an older `/wemember-staging:setup` wrote a blanket data ban to your `CLAUDE.md`, run setup again to replace that Wemember section; exclusions you chose yourself remain yours.
 
 ## Install
 

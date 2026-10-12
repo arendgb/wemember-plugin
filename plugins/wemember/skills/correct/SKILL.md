@@ -13,6 +13,7 @@ description: Fix or take back something stored in Wemember. Use when the user sa
    | the user's own note, not yet published | a correction | `memory.revise` with the exact correction. For a partial correction, read `memory.history` and pass `currentStatement` with the unchanged details. |
    | the user's own note, not yet published | to take it back | `memory.withdraw` |
    | published knowledge, or someone else's note | a correction | `memory.feedback` with a readable correction. It goes to the review queue; a reviewer changes or revokes it in the Wemember web app. |
+   | knowledge an agent published for the user | to take it back | Tell the user: they undo it themselves in the Wemember web app, under Changes, within the undo period. An agent cannot. |
 
 3. Never save a correction or a retraction as a new statement.
 4. Confirm in one sentence what changed, or that it awaits a reviewer.

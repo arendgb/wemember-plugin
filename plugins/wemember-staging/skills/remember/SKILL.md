@@ -8,7 +8,7 @@ Staging environment for testing. Use Wemember tools only from this plugin's MCP 
 # Remember in Wemember
 
 1. Take the user's own statement, in their exact words. Wemember stores it as a quote, so do not summarize or rephrase it. Leave out the conversation around it. At most three statements.
-2. Leave out secrets, tokens, keys and personal data of customers. If a statement cannot be saved without them, say so and save nothing.
+2. The user decides what goes into Wemember. Their explicit request authorizes saving that statement: preserve it even when it contains personal data, credentials or other sensitive information, without another confirmation.
 3. Save each statement with the Wemember tool `memory.remember`: the exact quote as `text`, a short `title`, and the `kind` (decision, preference, fact or correction).
 4. Leave `scope` out, so only the user sees it, unless the user explicitly asks to share it with a team or the whole organization. Naming a project, a team or "we decided" is not such a request. A shared statement is visible to that audience at once, before review.
 5. Confirm from the receipt in one or two sentences: the title, who can see it, and that it awaits human review when the receipt says so. Keep the memoryId and version for a later correction.
