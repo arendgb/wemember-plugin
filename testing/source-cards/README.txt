@@ -2,7 +2,7 @@ Bronkaartproef — echte stagingplugin
 ====================================
 
 Gebruik Wemember staging (testing) versie 0.3.3 en meld aan met je stagingaccount.
-Gebruik uitsluitend de stagingverbinding en werkruimte Noordlicht. Productie is
+Gebruik uitsluitend de stagingverbinding en werkruimte Noordlicht Operations — fictief testbedrijf. Productie is
 geen vervanging als staging niet bereikbaar is. Alle voorbeelddata zijn verzonnen
 en persoonlijk opgeslagen bij het testaccount. Andere testers kunnen ze zelf
 importeren met dezelfde fixture; de proef deelt niets automatisch.
@@ -17,8 +17,8 @@ Installeren of bijwerken
   pluginregels/hookproef vereist de plugin. Noteer welke omgeving je test.
 
 Data klaarzetten / protocol controleren (voor ontwikkelaars in cinch-platform)
-  node test/hosted/source-cards-qa.mjs --environment staging --workspace Noordlicht
-  De OAuth-aanmeldlink verschijnt. Meld aan en kies uitsluitend Noordlicht.
+  node test/hosted/source-cards-qa.mjs --environment staging --workspace "Noordlicht Operations — fictief testbedrijf"
+  De OAuth-aanmeldlink verschijnt. Meld aan en kies uitsluitend Noordlicht Operations — fictief testbedrijf.
   De script gebruikt de gewone MCP-tools; geen database, geheime sleutel of bypass.
   Tokens blijven uitsluitend in het geheugen van die procesrun.
   Bron-id's, versies en de echte paginalink staan in dist/source-card-qa/staging.json.
@@ -26,7 +26,7 @@ Data klaarzetten / protocol controleren (voor ontwikkelaars in cinch-platform)
 
 Klaarzetten via de plugin (alternatief voor de script)
   Lees de volledige bestanden testing/source-cards/fixture.mjs en README.txt.
-  Gebruik uitsluitend wemember-staging in werkruimte Noordlicht. Importeer de drie
+  Gebruik uitsluitend wemember-staging in werkruimte Noordlicht Operations — fictief testbedrijf. Importeer de drie
   sourceInputs uit de fixture persoonlijk met sources.upsert, sourceSystem
   wemember-source-card-qa en relativePath <externalId>.md. Prefix externalId met je geverifieerde
   actor.userId uit workspace.brief (bijvoorbeeld <actor>:onboarding). Zoek de persoonlijke
@@ -48,7 +48,7 @@ De bronkaart met BEIDE links
 
 Versiescenario — uitsluitend deze eigen testbron veranderen
   Werk mijn persoonlijke bron [Bronkaartproef] Starten bij Noordlicht bij met
-  sources.upsert in de stagingwerkruimte Noordlicht. Gebruik dezelfde persoonsgebonden provenance
+  sources.upsert in de stagingwerkruimte Noordlicht Operations — fictief testbedrijf. Gebruik dezelfde persoonsgebonden provenance
   uit het voorbereidingsrapport en de exacte huidige expectedVersion. Behoud de volledige
   brontekst en vervang alleen 09:00 door 09:30. Toon de nieuwe versie, maar
   vernieuw de eerder geopende kaart niet. Verander geen andere bron.
