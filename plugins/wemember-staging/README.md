@@ -34,7 +34,7 @@ You decide what goes into Wemember. An explicit request to import or save author
 **Claude Code**
 
 ```
-/plugin marketplace add arendgb/wemember-plugin
+/plugin marketplace add wemember-ai/plugin
 /plugin install wemember-staging@wemember
 ```
 
@@ -43,7 +43,7 @@ Then run `/mcp`, choose the Wemember staging server of the plugin and sign in.
 **Codex** (CLI and the ChatGPT desktop app)
 
 ```
-codex plugin marketplace add arendgb/wemember-plugin
+codex plugin marketplace add wemember-ai/plugin
 ```
 
 Install Wemember staging from `/plugins` (or run `codex plugin add wemember-staging@wemember`), sign in with `codex mcp login wemember-staging`, and trust its hooks in `/hooks`. Codex skips plugin hooks until you trust them. The Codex IDE extension does not load plugins; use the ordinary MCP connection there.
@@ -82,7 +82,7 @@ To update by hand instead: `/plugin` → **Installed** → Wemember staging → 
 {
   "extraKnownMarketplaces": {
     "wemember": {
-      "source": { "source": "github", "repo": "arendgb/wemember-plugin" },
+      "source": { "source": "github", "repo": "wemember-ai/plugin" },
       "autoUpdate": true
     }
   },
@@ -94,7 +94,7 @@ To update by hand instead: `/plugin` → **Installed** → Wemember staging → 
 
 Each person still signs in to Wemember once via `/mcp`; the plugin never shares a sign-in.
 
-**Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `arendgb/wemember-plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
+**Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `wemember-ai/plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
 
 ## If something goes wrong
 
@@ -104,4 +104,4 @@ Each person still signs in to Wemember once via `/mcp`; the plugin never shares 
 
 ## Support
 
-Questions and security reports: <https://github.com/arendgb/wemember-plugin/issues>. Privacy policy: to be published before this plugin is listed in a public directory.
+Questions and security reports: <https://github.com/wemember-ai/plugin/issues>. Privacy policy: to be published before this plugin is listed in a public directory.

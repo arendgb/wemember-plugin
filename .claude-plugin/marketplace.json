@@ -2,7 +2,7 @@
   "name": "wemember",
   "owner": {
     "name": "Wemember",
-    "url": "https://github.com/arendgb/wemember-plugin"
+    "url": "https://github.com/wemember-ai/plugin"
   },
   "description": "Wemember plugins for Claude Code.",
   "plugins": [

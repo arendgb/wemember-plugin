@@ -32,7 +32,7 @@ You decide what goes into Wemember. An explicit request to import or save author
 **Claude Code**
 
 ```
-/plugin marketplace add arendgb/wemember-plugin
+/plugin marketplace add wemember-ai/plugin
 /plugin install wemember@wemember
 ```
 
@@ -41,7 +41,7 @@ Then run `/mcp`, choose the Wemember server of the plugin and sign in.
 **Codex** (CLI and the ChatGPT desktop app)
 
 ```
-codex plugin marketplace add arendgb/wemember-plugin
+codex plugin marketplace add wemember-ai/plugin
 ```
 
 Install Wemember from `/plugins`, sign in with `codex mcp login wemember`, and trust its hooks in `/hooks`. Codex skips plugin hooks until you trust them. The Codex IDE extension does not load plugins; use the ordinary MCP connection there.
@@ -49,7 +49,7 @@ Install Wemember from `/plugins`, sign in with `codex mcp login wemember`, and t
 
 **Cursor / Grok Bot**
 
-- **Team marketplace (Teams / Enterprise):** open [Dashboard → Plugins & MCPs](https://cursor.com/dashboard), Add Marketplace → Import from Repo `arendgb/wemember-plugin`. Install Wemember from Customize, then complete the Wemember MCP OAuth sign-in when prompted.
+- **Team marketplace (Teams / Enterprise):** open [Dashboard → Plugins & MCPs](https://cursor.com/dashboard), Add Marketplace → Import from Repo `wemember-ai/plugin`. Install Wemember from Customize, then complete the Wemember MCP OAuth sign-in when prompted.
 - **Local development:** copy or symlink this directory to `~/.cursor/plugins/local/wemember`, run Developer: Reload Window, and confirm skills and the Wemember MCP server under Customize. On Teams/Enterprise, Allow Local Plugin Imports must be enabled.
 - **Public Cursor Marketplace:** this repo is not listed there until it is submitted at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) and reviewed.
 
@@ -92,7 +92,7 @@ To update by hand instead: `/plugin` → **Installed** → Wemember → **Update
 {
   "extraKnownMarketplaces": {
     "wemember": {
-      "source": { "source": "github", "repo": "arendgb/wemember-plugin" },
+      "source": { "source": "github", "repo": "wemember-ai/plugin" },
       "autoUpdate": true
     }
   },
@@ -104,10 +104,10 @@ To update by hand instead: `/plugin` → **Installed** → Wemember → **Update
 
 Each person still signs in to Wemember once via `/mcp`; the plugin never shares a sign-in.
 
-**Cursor, for your team.** In the Cursor Dashboard under **Plugins & MCPs**, add a Team Marketplace with Import from Repo `arendgb/wemember-plugin`. Set Marketplace Access and per-plugin installation mode (Default Off, Default On, or Required). Each person still signs in to Wemember once via the MCP OAuth prompt; the plugin never shares a sign-in.
+**Cursor, for your team.** In the Cursor Dashboard under **Plugins & MCPs**, add a Team Marketplace with Import from Repo `wemember-ai/plugin`. Set Marketplace Access and per-plugin installation mode (Default Off, Default On, or Required). Each person still signs in to Wemember once via the MCP OAuth prompt; the plugin never shares a sign-in.
 
 
-**Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `arendgb/wemember-plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
+**Codex and ChatGPT, for your workspace.** In ChatGPT, open **Admin → Plugins → Marketplaces** and import the GitHub repository `wemember-ai/plugin`. The workspace then syncs it daily; **Sync now** fetches a new version at once, and an invalid update keeps the last working version. Set per plugin whether Wemember is available or installed by default.
 
 ## If something goes wrong
 
@@ -117,4 +117,4 @@ Each person still signs in to Wemember once via `/mcp`; the plugin never shares 
 
 ## Support
 
-Questions and security reports: <https://github.com/arendgb/wemember-plugin/issues>. Privacy policy: to be published before this plugin is listed in a public directory.
+Questions and security reports: <https://github.com/wemember-ai/plugin/issues>. Privacy policy: to be published before this plugin is listed in a public directory.

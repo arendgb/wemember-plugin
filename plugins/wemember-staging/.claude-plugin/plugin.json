@@ -5,10 +5,10 @@
   "description": "Staging environment for testing. Your company's memory in Claude Code: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
   "author": {
     "name": "Wemember",
-    "url": "https://github.com/arendgb/wemember-plugin"
+    "url": "https://github.com/wemember-ai/plugin"
   },
-  "homepage": "https://github.com/arendgb/wemember-plugin",
-  "repository": "https://github.com/arendgb/wemember-plugin",
+  "homepage": "https://github.com/wemember-ai/plugin",
+  "repository": "https://github.com/wemember-ai/plugin",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
     "memory",
