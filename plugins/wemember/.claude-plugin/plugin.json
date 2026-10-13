@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/wemember-ai/plugin",
   "repository": "https://github.com/wemember-ai/plugin",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "keywords": ["memory", "company-memory", "context", "mcp"],
   "userConfig": {
     "propose_memories": {
