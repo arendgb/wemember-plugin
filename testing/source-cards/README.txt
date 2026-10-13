@@ -16,7 +16,7 @@ Installeren of bijwerken
   Claude desktop met alleen een connector krijgt serverkaarten, maar de
   pluginregels/hookproef vereist de plugin. Noteer welke omgeving je test.
 
-Data klaarzetten / protocol controleren (voor ontwikkelaars in cinch-platform)
+Data klaarzetten / protocol controleren (voor ontwikkelaars in wemember-ai/platform)
   node test/hosted/source-cards-qa.mjs --environment staging --workspace "Noordlicht Operations — fictief testbedrijf"
   De OAuth-aanmeldlink verschijnt. Meld aan en kies uitsluitend Noordlicht Operations — fictief testbedrijf.
   De script gebruikt de gewone MCP-tools; geen database, geheime sleutel of bypass.
