@@ -7,7 +7,7 @@
     "url": "https://github.com/wemember-ai/plugin"
   },
   "homepage": "https://github.com/wemember-ai/plugin",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "keywords": ["memory", "company-memory", "context", "mcp"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",

@@ -10,7 +10,7 @@
 <h3 align="center">Your company's memory in Claude Code, Codex and Cursor</h3>
 
 <p align="center">
-  <a href="plugins/wemember/LICENSE"><img alt="License: proprietary" src="https://img.shields.io/badge/license-proprietary-111214?style=flat-square"></a>
+  <a href="plugins/wemember/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green?style=flat-square"></a>
   <img alt="Version 0.3.2" src="https://img.shields.io/badge/version-0.3.2-111214?style=flat-square">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-app.wemember.ai%2Fmcp-111214?style=flat-square">
 </p>
@@ -85,6 +85,6 @@ How to turn parts on or off, automatic updates, and a ready-made setup for admin
 
 ## License
 
-Copyright © 2026 Wemember. All rights reserved. The plugin may be installed and used together with a Wemember account; see [LICENSE](plugins/wemember/LICENSE).
+[MIT](plugins/wemember/LICENSE) © 2026 Wemember.
 
 <p align="center"><a href="https://wemember.ai">wemember.ai</a></p>
