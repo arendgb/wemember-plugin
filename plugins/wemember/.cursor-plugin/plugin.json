@@ -11,6 +11,5 @@
   "keywords": ["memory", "company-memory", "knowledge", "context", "mcp", "skills", "oauth"],
   "logo": "assets/logo.svg",
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
-  "displayName": "Wemember"
+  "mcpServers": "./.mcp.json"
 }
