@@ -21,7 +21,7 @@
       ],
       "logo": "assets/logo.svg",
       "homepage": "https://wemember.ai",
-      "repository": "https://github.com/arendgb/wemember-plugin"
+      "repository": "https://github.com/wemember-ai/plugin"
     }
   ]
 }
