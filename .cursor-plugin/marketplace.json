@@ -4,7 +4,7 @@
     "name": "Wemember"
   },
   "metadata": {
-    "description": "Wemember plugins for Cursor and Grok Bot.",
+    "description": "Wemember: company memory under the AI tools you already use.",
     "version": "0.3.2",
     "pluginRoot": "plugins"
   },
@@ -12,7 +12,16 @@
     {
       "name": "wemember",
       "source": "wemember",
-      "description": "Your company's memory in Cursor and Grok Bot: Wemember MCP tools plus skills. Session-context hooks remain Claude Code and Codex only."
+      "description": "Company memory for Cursor. Connects Cursor to your Wemember workspace over MCP (OAuth) and adds skills to catch up on, remember, correct and share what your company knows. Wemember is the memory layer under the AI tools you already use (Claude, ChatGPT, Cursor, Grok), not another agent workplace. Requires a Wemember account.",
+      "category": "productivity",
+      "tags": [
+        "memory",
+        "knowledge",
+        "mcp"
+      ],
+      "logo": "assets/logo.svg",
+      "homepage": "https://wemember.ai",
+      "repository": "https://github.com/arendgb/wemember-plugin"
     }
   ]
 }
