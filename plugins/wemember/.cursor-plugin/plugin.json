@@ -5,8 +5,8 @@
   "author": {
     "name": "Wemember"
   },
-  "homepage": "https://github.com/arendgb/wemember-plugin",
-  "repository": "https://github.com/arendgb/wemember-plugin",
+  "homepage": "https://github.com/wemember-ai/plugin",
+  "repository": "https://github.com/wemember-ai/plugin",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": ["memory", "company-memory", "context", "mcp"],
   "logo": "assets/logo.png",

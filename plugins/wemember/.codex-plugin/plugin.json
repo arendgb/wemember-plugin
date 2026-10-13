@@ -4,9 +4,9 @@
   "description": "Your company's memory in Codex: relevant Wemember context at the first prompt of a session, and optional proposals to remember what a session settled.",
   "author": {
     "name": "Wemember",
-    "url": "https://github.com/arendgb/wemember-plugin"
+    "url": "https://github.com/wemember-ai/plugin"
   },
-  "homepage": "https://github.com/arendgb/wemember-plugin",
+  "homepage": "https://github.com/wemember-ai/plugin",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": ["memory", "company-memory", "context", "mcp"],
   "skills": "./skills/",
@@ -17,7 +17,7 @@
     "shortDescription": "Your company's memory in every Codex session",
     "developerName": "Wemember",
     "category": "Productivity",
-    "websiteURL": "https://github.com/arendgb/wemember-plugin",
+    "websiteURL": "https://github.com/wemember-ai/plugin",
     "composerIcon": "./assets/composer-icon.png",
     "logo": "./assets/logo.png",
     "logoDark": "./assets/logo-dark.png"
