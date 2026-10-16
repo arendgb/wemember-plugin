@@ -15,3 +15,10 @@ description: Answer questions about the user's company and the organizations it 
 1. Call `workspace.resume`, with the topic if the user named one.
 2. Report the listed items as the user's own earlier, unreviewed notes, newest first, in their words.
 3. Check anything that must be current with `context.query` before you act on it.
+
+## Quiet source and page presentation
+
+- Answer first. When one central source helps the user verify or continue, call `sources.view` with its exact delivered version and workspace to show one compact card. Do not repeat a card already shown unless asked. For a simple fact or several sources, brief source citations are enough. Never ask whether to show a card.
+- The full source is behind the card's read button; do not dump it into the chat. If the host has no interactive viewer, give the source label, version and clickable source link. Never paste tool JSON.
+- When the user asks to see an existing site, page or artifact, find it with `pages.list` if needed and call `pages.view`. Put the requested result prominently before commentary. Do not publish or share merely to display it. If the viewer is unavailable, put its title and clickable address first.
+- If the user chooses “Only on request” / “Alleen op verzoek”, stop suggesting source cards for this conversation. Keep brief citations; explicitly requested sources, sites and artifacts still appear. Confirm in one short sentence without a question. Re-enable suggestions only when the user asks or chooses “Suggest relevant sources”. This is a conversation preference, not an account-wide setting; do not store it as company memory.

@@ -33,7 +33,7 @@ asked_file="$dir/$session.asked"
 threshold="${WEMEMBER_STAGING_PROPOSE_AFTER_TOOL_CALLS:-15}"
 case "$threshold" in ''|*[!0-9]*) threshold=15 ;; esac
 
-reason='Use only the wemember-staging MCP server in Codex or plugin:wemember-staging:wemember-staging in Claude Code. Wemember staging (you turned on memory proposals): if the user stated a decision, a preference or an agreement in this session that is worth keeping for the team, propose at most three, each with Wemember memory.remember in the exact words of the user: personal scope. The user decides what is stored; preserve their statement without a content safeguard. With more than one workspace, name the workspace each one belongs to (argument workspace); ask the user when that is unclear. Then confirm in one short sentence what you proposed. If nothing qualifies, save nothing and reply only: Nothing to propose to Wemember.'
+reason='Use only the wemember-staging MCP server in Codex or plugin:wemember-staging:wemember-staging in Claude Code. Wemember staging (you turned on memory proposals): if the user stated a decision, a preference or an agreement in this session that is worth keeping for the team, propose at most three, each with Wemember memory.remember in the exact words of the user: personal scope, unless the user said yes to saving it for one of their own teams. The user decides what is stored; preserve their statement without a content safeguard. With more than one workspace, name the workspace each one belongs to (argument workspace); ask the user when that is unclear. Then confirm in one short sentence what you proposed. If nothing qualifies, save nothing and reply only: Nothing to propose to Wemember.'
 
 case "${1:-}" in
   count)

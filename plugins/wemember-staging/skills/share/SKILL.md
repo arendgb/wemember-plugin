@@ -13,6 +13,7 @@ Staging environment for testing. Use Wemember tools only from this plugin's MCP 
 4. Make it in the form the user wants:
    - **A page.** If your environment can publish a page or document, use that; otherwise write one self-contained HTML file with no external scripts, which the user can send.
    - **Inside Wemember.** `sources.import` with `scope` "team" (and the teamId) or "organization", only when the user asks. It is visible to that audience at once, before review, with the content the user requested.
+   - **What only the user sees, with their team.** When `workspace.brief` says that only the user sees some of their statements or documents, and the user says yes to sharing them with one of their teams: `memory.list` shows the statements; share each one with `memory.share` (its id, version and the teamId). A document goes with `sources.upsert`: the same `sourceSystem`, `externalId`, `relativePath`, `title` and `contentHash`, with `scope` "team" and the teamId, so only the audience changes. Never the whole organization on your own.
 5. Name each fact's source and version in the result, and add the date.
 6. Tell the user what is in it and who can see it.
 
